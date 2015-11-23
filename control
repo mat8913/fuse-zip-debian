@@ -1,0 +1,21 @@
+Source: fuse-zip
+Section: utils
+Priority: optional
+Maintainer: Matthew Bekkema <mbekkema97@gmail.com>
+Build-Depends: debhelper (>= 9),
+ libfuse-dev,
+ libzip-dev (>= 0.11.2),
+ pkg-config
+Standards-Version: 3.9.6
+Homepage: http://code.google.com/p/fuse-zip
+
+Package: fuse-zip
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+        ,fuse [linux-any] | fuse4bsd [kfreebsd-any]
+Description: ZIP archive mounter based on FUSE
+ fuse-zip is a FUSE file system to navigate, extract, create and modify ZIP
+ archives. With fuse-zip, you can work with ZIP archives as real directories.
+ .
+ fuse-zip is faster that other known FUSE implementations of ZIP directories,
+ and includes full write support.

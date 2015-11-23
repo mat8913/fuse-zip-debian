@@ -1,0 +1,59 @@
+fuse-zip (0.4.0-2) unstable; urgency=low
+
+  * Bump standards
+  * Remove debian/patches
+  * debian/changelog: Use machine-readable format
+  * Add depend on fuse (or fuse4bsd on kfreebsd)
+
+ -- Matthew Bekkema <mbekkema97@gmail.com>  Mon, 23 Feb 2015 23:58:05 +1100
+
+fuse-zip (0.4.0-1) unstable; urgency=low
+
+  * Initial upload to Debian (Closes: #516398)
+  * debian/control: Change maintainer to mbekkema97@gmail.com
+  * New upstream release
+    - debian/patches/debian-changes-0.2.13-0ubuntu1 and
+      debian/patches/fuse-zip_libzip-0.10.patch removed
+    - build depend on libzip-dev (>= 0.11.2)
+  * Update debian/watch
+  * debian/rules: Use dpkg-buildflags
+  * Bump Standards.
+  * Use debhelper v9
+
+ -- Matthew Bekkema <mbekkema97@gmail.com>  Thu, 10 Jul 2014 09:48:11 +1000
+
+fuse-zip (0.2.13-0ubuntu2) precise; urgency=low
+
+  * Fix build failure with libzip 0.10.
+
+ -- Fathi Boudra <fabo@debian.org>  Mon, 19 Mar 2012 15:14:30 +0200
+
+fuse-zip (0.2.13-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+  * Bump standards
+  * Change the order of linking in Makefile to fix FTBFS with 
+    present natty toolchain  
+
+ -- Bhavani Shankar <bhavi@ubuntu.com>  Sat, 11 Dec 2010 12:18:27 +0530
+
+fuse-zip (0.2.12-0ubuntu1) lucid; urgency=low
+
+  * New upstream bugfix-only release.
+  * Bump Standards.
+  * Adjust build-dep on debhelper to ease backporters' life.
+  * Disable auto_test target to avoid FTBFS.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sun, 28 Feb 2010 14:48:24 +0100
+
+fuse-zip (0.2.8-0ubuntu2) lucid; urgency=low
+
+  * Migrated to the 3.0 (quilt) format.
+
+ -- Maia Kozheva <sikon@ubuntu.com>  Tue, 22 Dec 2009 14:14:32 +0600
+
+fuse-zip (0.2.8-0ubuntu1) lucid; urgency=low
+
+  * Initial release (LP: #240306)
+
+ -- Maia Kozheva <sikon@ubuntu.com>  Thu, 19 Nov 2009 14:02:07 +0600
