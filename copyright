@@ -6,26 +6,11 @@ Source: http://code.google.com/p/fuse-zip
 Files: *
 Copyright: 2008-2014 Alexander Galanin <al@galanin.nnov.ru>
 License: LGPL-3+
-  This program is free software; you can redistribute it and/or modify  
-  it under the terms of the GNU Lesser General Public License as       
-  published by the Free Software Foundation; either version 3 of the    
-  License, or (at your option) any later version.                       
-  .
-  This program is distributed in the hope that it will be useful,       
-  but WITHOUT ANY WARRANTY; without even the implied warranty of        
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         
-  GNU General Public License for more details.                          
-  .
-  You should have received a copy of the GNU Library General Public     
-  License along with this program; if not, write to the                 
-  Free Software Foundation, Inc.,                                       
-  51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA               
-  .
-  On Debian systems, the complete text of the GNU Lesser General Public
-  License version 3 can be found at `/usr/share/common-licenses/LGPL-3'.
 
 Files: debian/*
 Copyright: 2008 Maia Kozheva <sikon@ubuntu.com>
+License: LGPL-3+
+
 License: LGPL-3+
   This program is free software; you can redistribute it and/or modify  
   it under the terms of the GNU Lesser General Public License as       

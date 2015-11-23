@@ -5,7 +5,9 @@ CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
 CXXFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)
 
 override_dh_auto_install:
-	$(MAKE) CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" INSTALLPREFIX=$(CURDIR)/debian/fuse-zip/usr install
+	mkdir -p $(CURDIR)/debian/fuse-zip/usr/bin/
+	mkdir -p $(CURDIR)/debian/fuse-zip/usr/share/man/man1/
+	$(MAKE) CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" prefix=$(CURDIR)/debian/fuse-zip/usr install
 
 override_dh_auto_test:
 

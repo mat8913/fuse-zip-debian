@@ -1,2 +1,2 @@
 version=3
-http://code.google.com/p/fuse-zip/downloads/list?can=1 .*/fuse-zip-(\d\S*)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+https://bitbucket.org/agalanin/fuse-zip/downloads .*/(\d\S*)\.tar\.gz
