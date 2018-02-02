@@ -1,0 +1,59 @@
+Author: Alexander Galanin <al@galanin.nnov.ru>
+Description: Properly handle ZIP_SOURCE_SUPPORTS call introduced in libzip 1.0
+
+--- a/lib/bigBuffer.cpp
++++ b/lib/bigBuffer.cpp
+@@ -1,5 +1,5 @@
+ ////////////////////////////////////////////////////////////////////////////
+-//  Copyright (C) 2008-2014 by Alexander Galanin                          //
++//  Copyright (C) 2008-2016 by Alexander Galanin                          //
+ //  al@galanin.nnov.ru                                                    //
+ //  http://galanin.nnov.ru/~al                                            //
+ //                                                                        //
+@@ -282,9 +282,27 @@
+             delete b;
+             return 0;
+         }
+-        default: {
++        case ZIP_SOURCE_CLOSE:
+             return 0;
++        case ZIP_SOURCE_ERROR: {
++            // This code should not be called in normal case because none of
++            // implemented functions raises error flag.
++            int *errs = static_cast<int *>(data);
++#if LIBZIP_VERSION_MAJOR >= 1
++            errs[0] = ZIP_ER_OPNOTSUPP;
++#else
++            errs[0] = ZIP_ER_INVAL;
++#endif
++            errs[1] = EINVAL;
++            return 2 * sizeof(int);
+         }
++#if LIBZIP_VERSION_MAJOR >= 1
++        case ZIP_SOURCE_SUPPORTS:
++            return ZIP_SOURCE_SUPPORTS_READABLE;
++#endif
++        default:
++            // indicate unsupported operation
++            return -1;
+     }
+ }
+ 
+--- a/lib/bigBuffer.h
++++ b/lib/bigBuffer.h
+@@ -1,5 +1,5 @@
+ ////////////////////////////////////////////////////////////////////////////
+-//  Copyright (C) 2008-2014 by Alexander Galanin                          //
++//  Copyright (C) 2008-2016 by Alexander Galanin                          //
+ //  al@galanin.nnov.ru                                                    //
+ //  http://galanin.nnov.ru/~al                                            //
+ //                                                                        //
+@@ -48,8 +48,6 @@
+ 
+     /**
+      * Callback for zip_source_function.
+-     * ZIP_SOURCE_CLOSE is not needed to be handled, ZIP_SOURCE_ERROR is
+-     * never called because read() always successfull.
+      * See zip_source_function(3) for details.
+      */
+     static zip_int64_t zipUserFunctionCallback(void *state, void *data,

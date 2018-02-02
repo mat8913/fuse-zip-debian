@@ -1,3 +1,9 @@
+fuse-zip (0.4.0-2+deb9u1) stretch; urgency=medium
+
+  * Backport upstream commit 9b9c2f47cfe9 to fix writeback fail with libzip 1.0
+
+ -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Sat, 03 Feb 2018 10:44:41 +1100
+
 fuse-zip (0.4.0-2) unstable; urgency=low
 
   * Bump standards
