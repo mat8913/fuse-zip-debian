@@ -1,2 +1,2 @@
 version=3
-https://bitbucket.org/agalanin/fuse-zip/downloads .*/(\d\S*)\.tar\.gz
+https://bitbucket.org/agalanin/fuse-zip/downloads?tab=tags .*/(\d\S+)\.tar\.gz
