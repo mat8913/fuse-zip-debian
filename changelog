@@ -5,8 +5,9 @@ fuse-zip (0.4.4-1) unstable; urgency=low
   * Update links to new upstream home
   * Don't repeat license text in debian/copyright
   * Add Reiner Herrmann's patch to make the build reproducible (Closes: #842625)
+  * Upgrade to debhelper 10
 
- -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Fri, 02 Feb 2018 21:12:10 +1100
+ -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Fri, 02 Feb 2018 21:14:54 +1100
 
 fuse-zip (0.4.0-2) unstable; urgency=low
 
