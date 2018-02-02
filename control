@@ -1,9 +1,9 @@
 Source: fuse-zip
 Section: utils
 Priority: optional
-Maintainer: Matthew Bekkema <mbekkema97@gmail.com>
+Maintainer: Matthew Harm Bekkema <mbekkema97@gmail.com>
 Build-Depends: debhelper (>= 9),
- libfuse-dev,
+ libfuse-dev (>= 2.7),
  libzip-dev (>= 0.11.2),
  pkg-config
 Standards-Version: 3.9.6
