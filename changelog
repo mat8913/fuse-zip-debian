@@ -4,7 +4,6 @@ fuse-zip (0.4.4-1) unstable; urgency=low
     - Upgrade license from LGPL3+ to GPL3+
   * Update links to new upstream home
   * Don't repeat license text in debian/copyright
-  * Enable tests
 
  -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Fri, 02 Feb 2018 16:37:31 +1100
 
