@@ -1,3 +1,10 @@
+fuse-zip (0.4.5-1) unstable; urgency=low
+
+  * New upstream release
+    - Drop debian/patches/reproducible-build.patch (now included upstream)
+
+ -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Tue, 06 Feb 2018 16:58:45 +1100
+
 fuse-zip (0.4.4-1) unstable; urgency=low
 
   * New upstream release (Closes: #795675)
