@@ -8,7 +8,9 @@ override_dh_auto_install:
 	dh_auto_install -- CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" prefix=/usr
 
 override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	$(MAKE) -C tests/whitebox CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" valgrind
+endif
 
 override_dh_auto_build:
 	dh_auto_build -- CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)"
