@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mkdir "$AUTOPKGTEST_TMP"/x &&
+cp -r tests/blackbox/ "$AUTOPKGTEST_TMP"/x/blackbox &&
+cd "$AUTOPKGTEST_TMP" &&
+ln -s /usr/bin/fuse-zip &&
+cd x/blackbox/ &&
+exec ./fuse-zip.test -valgrind

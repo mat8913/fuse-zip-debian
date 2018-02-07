@@ -1,0 +1,11 @@
+Tests: blackbox
+Restrictions: isolation-machine
+Depends: fuse-zip,
+ tcl (>= 8.5),
+ blt,
+ tclx,
+ tcllib (>= 1.10),
+ valgrind,
+ fuse,
+ zip,
+ unzip
