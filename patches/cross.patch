@@ -1,0 +1,35 @@
+--- fuse-zip-0.4.4.orig/Makefile
++++ fuse-zip-0.4.4/Makefile
+@@ -7,12 +7,13 @@
+ mandir=$(datarootdir)/man
+ man1dir=$(mandir)/man1
+ manext=.1
+-LIBS=-Llib -lfusezip $(shell pkg-config fuse --libs) $(shell pkg-config libzip --libs)
++PKG_CONFIG?=pkg-config
++LIBS=-Llib -lfusezip $(shell $(PKG_CONFIG) fuse --libs) $(shell $(PKG_CONFIG) libzip --libs)
+ LIB=lib/libfusezip.a
+ CXXFLAGS=-g -O0 -Wall -Wextra
+ RELEASE_CXXFLAGS=-O2 -Wall -Wextra
+-FUSEFLAGS=$(shell pkg-config fuse --cflags)
+-ZIPFLAGS=$(shell pkg-config libzip --cflags)
++FUSEFLAGS=$(shell $(PKG_CONFIG) fuse --cflags)
++ZIPFLAGS=$(shell $(PKG_CONFIG) libzip --cflags)
+ SOURCES=main.cpp
+ OBJECTS=$(SOURCES:.cpp=.o)
+ MANSRC=fuse-zip.1
+--- fuse-zip-0.4.4.orig/lib/Makefile
++++ fuse-zip-0.4.4/lib/Makefile
+@@ -1,9 +1,10 @@
+ DEST=libfusezip.a
+-LIBS=$(shell pkg-config fuse --libs) $(shell pkg-config libzip --libs)
++PKG_CONFIG?=pkg-config
++LIBS=$(shell $(PKG_CONFIG) fuse --libs) $(shell $(PKG_CONFIG) libzip --libs)
+ CXXFLAGS=-g -O0 -Wall -Wextra
+ RELEASE_CXXFLAGS=-O2 -Wall -Wextra
+-FUSEFLAGS=$(shell pkg-config fuse --cflags)
+-ZIPFLAGS=$(shell pkg-config libzip --cflags)
++FUSEFLAGS=$(shell $(PKG_CONFIG) fuse --cflags)
++ZIPFLAGS=$(shell $(PKG_CONFIG) libzip --cflags)
+ SOURCES=$(sort $(wildcard *.cpp))
+ OBJECTS=$(SOURCES:.cpp=.o)
+ CLEANFILES=$(OBJECTS) $(DEST)

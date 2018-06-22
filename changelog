@@ -1,3 +1,12 @@
+fuse-zip (0.4.4-1.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTCBFS: (Closes: #-1)
+    + cross.patch: Make build tools substitutable.
+    + Also substitute build tools for make install.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Thu, 21 Jun 2018 21:34:10 +0200
+
 fuse-zip (0.4.4-1) unstable; urgency=low
 
   * New upstream release (Closes: #795675)
