@@ -1,6 +1,11 @@
 #!/usr/bin/make -f
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# for relinking fuse-zip during make install
+DPKG_EXPORT_BUILDTOOLS=1
+-include /usr/share/dpkg/buildtools.mk
+
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
 CXXFLAGS += $(shell dpkg-buildflags --get CPPFLAGS)

@@ -4,8 +4,11 @@ fuse-zip (0.4.5-1) unstable; urgency=low
     - Drop debian/patches/reproducible-build.patch (now included upstream)
   * Run whitebox tests on build
   * Run blackbox tests on autopkgtest
+  * Apply Helmut Grohne's patch to fix FTCBFS: (Closes: #902097)
+    + cross.patch: Make build tools substitutable.
+    + Also substitute build tools for make install.
 
- -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Wed, 07 Feb 2018 18:29:41 +1100
+ -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Sat, 30 Jun 2018 16:27:45 +1000
 
 fuse-zip (0.4.4-1) unstable; urgency=low
 
