@@ -7,8 +7,9 @@ fuse-zip (0.4.5-1) unstable; urgency=low
   * Apply Helmut Grohne's patch to fix FTCBFS: (Closes: #902097)
     + cross.patch: Make build tools substitutable.
     + Also substitute build tools for make install.
+  * Bump standards
 
- -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Sat, 30 Jun 2018 16:27:45 +1000
+ -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Mon, 02 Jul 2018 19:13:49 +1000
 
 fuse-zip (0.4.4-1) unstable; urgency=low
 
