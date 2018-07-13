@@ -1,6 +1,6 @@
 Tests: blackbox
 Restrictions: isolation-machine
-Depends: fuse-zip,
+Depends: @,
  tcl (>= 8.5),
  blt,
  tclx,
