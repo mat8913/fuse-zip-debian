@@ -3,6 +3,7 @@ Section: utils
 Priority: optional
 Maintainer: Matthew Harm Bekkema <mbekkema97@gmail.com>
 Build-Depends: debhelper (>= 10),
+ debhelper-compat (= 12),
  libfuse-dev (>= 2.7),
  libzip-dev (>= 0.11.2),
  pkg-config,
