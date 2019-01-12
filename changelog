@@ -1,8 +1,9 @@
 fuse-zip (0.4.5-2) unstable; urgency=low
 
+  * Bump standards
   * Disable valgrind (Closes: #918974)
 
- -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Sat, 12 Jan 2019 15:30:46 +1100
+ -- Matthew Harm Bekkema <mbekkema97@gmail.com>  Sat, 12 Jan 2019 15:34:37 +1100
 
 fuse-zip (0.4.5-1) unstable; urgency=low
 

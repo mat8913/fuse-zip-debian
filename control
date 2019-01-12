@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 10),
  libfuse-dev (>= 2.7),
  libzip-dev (>= 0.11.2),
  pkg-config,
-Standards-Version: 4.1.4
+Standards-Version: 4.3.0
 Homepage: https://bitbucket.org/agalanin/fuse-zip
 
 Package: fuse-zip
